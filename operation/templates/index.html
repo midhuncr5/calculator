@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block title_block%}
+<title>index</title>
+{%endblock%}
+
+{%block main_block%}
+<center>
+<h1>welcome</h1>
+</center>
+ 
+<div class="h-100 container d-flex align-items-center">
+
+   
+    <div class="row gap-1 mx-auto">
+        <div class="col-5 border gap-3 p-5"><a class="btn btn-info p-4" href="{%url 'addition'%}">add</a></div>
+        <div class="col-5 border gap-3 p-5"><a class="btn btn-info p-4" href="{%url 'bmi'%}">BMI</a></div>
+        <div class="col-5 border gap-3 p-5"><a class="btn btn-info p-4" href="{%url 'calorie'%}">Calorie</a></div>
+        <div class="col-5 border gap-3 p-5"><a class="btn btn-info p-4" href="{%url 'emi'%}">EMI</a></div>
+    </div>
+
+</div>
+
+
+
+{%endblock%}

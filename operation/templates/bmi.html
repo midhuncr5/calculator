@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+{%block main_block%}
+<h1>BMI calculate</h1>
+<form action="" method="post">
+    {%csrf_token%}
+    <label>Height :</label>
+    <input type="text" name="heightbox"><br>
+    <label>Weight :</label>
+    <input type="text" name="weightbox"><br>
+    <button type="submit">result</button><br>
+    BMI={{output}}
+
+
+</form>
+{%endblock%}

@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+
+{%block style_block%}
+<style>
+    #div1{
+        margin-top: 200px;
+        /* border: 2px solid black; */
+        box-shadow: 2px 2px 10px;
+        margin-left: 250px;
+        margin-right: 250px;
+    
+    
+    }
+    #button_calc{
+        
+        margin-top: 20px;
+    }
+
+    
+
+</style>
+{%endblock%}
+
+
+
+
+{%block main_block%}
+
+    <div id="div1" align="center">
+        <form action="" method="post">
+            {%csrf_token%}
+            <h1 align="center fw-10x">EMI CALCULATOR</h1>
+           <table>
+            <tr>
+                <td><label>Loan amount :</label></td>
+                <td><input type="text" name="loan"></td>
+            </tr>
+            <tr>
+                <td><label>Interest rate in(p.a):</label></td>
+                <td><input type="text" name="interest"></td>
+            </tr>
+            <tr>
+                <td><label>Tenure :</label></td>
+                <td><input type="text" name="tenure"></td>
+            </tr>
+            </table>
+
+            <button id="button_calc" type="submit" class="btn btn-success" >Calculate</button><br>
+            EMI = {{emi}}<br>
+            principal amount={{principal}}<br>
+            total interest={{total_interest}}
+    
+            
+           
+
+        </form>
+    </div>
+{%endblock%}
